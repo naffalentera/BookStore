@@ -20,8 +20,6 @@ public class Book {
     private String name;
     @Field(name = "author")
     private String author;
-    @Field(name = "genre")
-    private BookGenre bookGenre;
     @Field(name = "stock")
     private int stock;
     @Field(name = "price")
@@ -31,7 +29,6 @@ public class Book {
         this.id = id;
         this.name = name;
         this.author = author;
-        this.bookGenre = bookGenre;
         this.stock = stock;
         this.price = price;
     }
@@ -59,14 +56,6 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public BookGenre getBookGenre() {
-        return bookGenre;
-    }
-
-    public void setBookGenre(BookGenre bookGenre) {
-        this.bookGenre = bookGenre;
     }
 
     public int getStock() {

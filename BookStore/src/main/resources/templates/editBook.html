@@ -38,6 +38,9 @@
             <div class="card-body">
              
                 <div class="col-md-10">
+                  <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+                    <span th:text="${errorMessage}"></span>
+                  </div>
                     <form action="#" th:action="@{/create}" th:object="${book}" method="post">
                         <div class="row">
                             <div class="form-group col-md-8">
@@ -75,10 +78,7 @@
     
                         </div>
                     </form>
-                </div> 
-                <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
-                  <span th:text="${errorMessage}"></span>
-              </div>
+                </div>                 
             </div>
         </div>
     </div>

@@ -1,5 +1,7 @@
 package com.BookStore.BookStore.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +12,8 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface BookRepository extends ReactiveMongoRepository<Book, Long> {
 
-    Mono<Book> findById(String string);
+	Mono<Book> findById(Optional<Long> id);
+
+
     
 }
